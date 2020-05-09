@@ -15,6 +15,11 @@ class IpCheck
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if($request->ip() == '127.0.0.1'){
+                    return $next($request);
+
+        }
+
+        return redirect('/');
     }
 }
