@@ -14,7 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/dump', function () {
-    return dump('welcome to Epareto');
-});
